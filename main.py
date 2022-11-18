@@ -6,9 +6,11 @@ from utils.migrate import migrate
 from pprint import pprint
 
 # models
-from models.dish import Dish
+from models.dish_recipe import DishRecipe
+from models.dish_type import DishType
 from models.product import Product
-from models.user import User
+from models.user import User, UserRole
+from models.picture import Picture
 
 
 def create_app():

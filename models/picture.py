@@ -3,12 +3,10 @@ from utils.schema import ma
 from models.base import BaseModel
 
 
-class Product(db.Model, BaseModel):
+class Picture(db.Model, BaseModel):
     id = db.Column(db.Integer(), primary_key=True)
-    name = str
-    description = str
-    pictures = list
+    path = str
 
 
-class ProductSchema(ma.Schema):
+class PictureSchema(ma.Schema):
     pass
