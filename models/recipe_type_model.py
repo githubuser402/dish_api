@@ -1,13 +1,15 @@
 from utils.database import db
 from utils.schema import ma
-from models.base import BaseModel
+from models.base_model import BaseModel
 
 
-class DishType(db.Model, BaseModel):
+class RecipeType(db.Model, BaseModel):
+    __tablename__ = "dish_recipe_type"
+    
     id = db.Column(db.Integer(), primary_key=True)
     name = str
     description = str
 
 
-class DishTypeSchema(ma.Schema):
+class RecipeTypeSchema(ma.Schema):
     pass

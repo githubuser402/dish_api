@@ -1,16 +1,15 @@
-from config.settings import DevelopmentConfig
+from config.app_config import DevelopmentConfig
 from flask import Flask
 from utils.database import db
 from utils.schema import ma
 from utils.migrate import migrate
-from pprint import pprint
 
 # models
-from models.dish_recipe import DishRecipe
-from models.dish_type import DishType
-from models.product import Product
-from models.user import User, UserRole
-from models.picture import Picture
+from models.dish_recipe_model import DishRecipe
+from models.recipe_type_model import RecipeType
+from models.product_model import Product
+from models.user_model import User, UserRole
+from models.picture_model import Picture
 
 
 def create_app():
