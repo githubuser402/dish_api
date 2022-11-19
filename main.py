@@ -4,6 +4,14 @@ from utils.database import db
 from utils.schema import ma
 from utils.migrate import migrate
 
+#CORS - Cross Origin Resource Sharing
+from flask_cors import CORS
+
+# routes
+from routes.product_route import product_routes
+from routes.recipe_route import recipe_routes
+from routes.user_route import user_routes
+
 # models
 from models.dish_recipe_model import DishRecipe
 from models.recipe_type_model import RecipeType
@@ -23,6 +31,16 @@ def create_app():
     return app
 
 
+app = create_app()
+
+#CORS setup
+CORS(app=app, resources={r'/*': {'origins': '*'}})
+
+# register blueprints
+app.register_blueprint(recipe_routes, url_prefix="/ricipes/")
+app.register_blueprint(product_routes, url_prefix="/products/")
+app.register_blueprint(user_routes, url_prefix="/user/")
+
+
 if __name__ == "__main__":
-    app = create_app()
     app.run()

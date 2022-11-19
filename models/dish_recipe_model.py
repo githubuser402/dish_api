@@ -21,7 +21,7 @@ class DishRecipe(db.Model, BaseModel):
     __tablename__ = "recipe"
 
     id = db.Column(db.Integer(), primary_key=True)
-    name = db.Column(db.String(80), required=True)
+    name = db.Column(db.String(80), nullable=False)
     recipe = db.Column(db.String())
     products = db.relationship("Product", secondary=recipe_product, backref="dishes")
     pictures = db.relationship("Picture", secondary=recipe_picture)

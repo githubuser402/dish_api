@@ -12,4 +12,8 @@ class Picture(db.Model, BaseModel):
 
 
 class PictureSchema(ma.Schema):
-    pass
+    class Meta:
+        fields = ('id', 'path')
+    
+    id =  ma.Number(dump_only=True)
+    path = ma.String()

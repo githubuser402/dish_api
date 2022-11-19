@@ -1,4 +1,5 @@
 import os
+import datetime
 
 class Config(object):
     DEBUG = True
@@ -10,3 +11,5 @@ class Config(object):
     STATICFILES_FOLDER = os.path.join(os.getcwd(), "static/")
     MEDIAFILES_FOLDER = os.path.join(os.getcwd(), "media/")
     SECURITY_PASSWORD_SALT = None
+    TOKEN_LIFE_TIME = datetime.timedelta(hours=1)
+    ALGORITHM = "HS256"
