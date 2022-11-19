@@ -7,7 +7,8 @@ class Picture(db.Model, BaseModel):
     __tablename__ = "picture"
     
     id = db.Column(db.Integer(), primary_key=True)
-    path = str
+    path = db.Column(db.String(140))
+    product_id = db.Column(db.Integer(), db.ForeignKey("product.id"))
 
 
 class PictureSchema(ma.Schema):
