@@ -3,6 +3,7 @@ from utils.response import response_with
 import utils.response as resp
 
 from models.product_model import Product, ProductSchema
+from models.picture_model import Picture, PictureSchema
 
 
 product_routes = Blueprint("product_routes", __name__)
@@ -34,7 +35,7 @@ def get_product(product_id):
 @product_routes.route("/", methods=["POST"])
 def create_product():
     data = request.get_json()
-    product_schema = ProductSchema(only=('name', 'description', 'pictures'))
+    product_schema = ProductSchema(only=('name', 'description',))
     
     try:
         cleaned_data = product_schema.load(data)
@@ -53,6 +54,21 @@ def patch_product(product_id):
     return response_with(resp.SUCCESS_200)
 
 
-@product_routes.route("/<prouct_id>/", methods=["DELETE"])
+@product_routes.route("/<product_id>/", methods=["DELETE"])
 def delete_product(product_id):
     return response_with(resp.SUCCESS_204)
+
+
+@product_routes.route("/<product_id>/pictures/", methods=["GET"])
+def get_product_pictures(product_id):
+    pass
+
+
+@product_routes.route("/<product_id>/pictures/", methods=["POST"])
+def upload_product_picture(product_id):
+    pass
+
+
+@product_routes.route("/<product_id>/pictures/<picture_id>/", methods=["DELETE"])
+def delete_product_picture(product_id, picture_id):
+    pass
