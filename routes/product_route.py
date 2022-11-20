@@ -2,6 +2,8 @@ from flask import Blueprint, request
 from utils.response import response_with
 import utils.response as resp
 
+from utils.logger import logger
+
 from models.product_model import Product, ProductSchema
 from models.picture_model import Picture, PictureSchema
 
@@ -15,6 +17,8 @@ def get_all_products():
     products = Product.query.all()
     products_json = product_schema.dump(products)
     
+    logger.info("listed all products")
+        
     return response_with(resp.SUCCESS_200, value=products_json)
 
 
@@ -56,6 +60,11 @@ def patch_product(product_id):
 
 @product_routes.route("/<product_id>/", methods=["DELETE"])
 def delete_product(product_id):
+    product = Product.query.filter_by(id=product_id).first()
+    
+    if product:
+        product.delete()
+        
     return response_with(resp.SUCCESS_204)
 
 

@@ -4,6 +4,8 @@ from utils.database import db
 from utils.schema import ma
 from utils.migrate import migrate
 
+from utils.logger import logger
+
 #CORS - Cross Origin Resource Sharing
 from flask_cors import CORS
 
@@ -36,6 +38,7 @@ app = create_app()
 #CORS setup
 CORS(app=app, resources={r'/*': {'origins': '*'}})
 
+logger.info("registered blueprints")
 # register blueprints
 app.register_blueprint(recipe_routes, url_prefix="/ricipes/")
 app.register_blueprint(product_routes, url_prefix="/products/")

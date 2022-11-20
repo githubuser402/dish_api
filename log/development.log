@@ -1,0 +1,167 @@
+registry.py: registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+main.py: registered blueprints
+_internal.py: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+_internal.py: [33mPress CTRL+C to quit[0m
+registry.py: registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+main.py: registered blueprints
+_internal.py: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+_internal.py: [33mPress CTRL+C to quit[0m
+base.py: BEGIN (implicit)
+base.py: SELECT product.id AS product_id, product.name AS product_name, product.description AS product_description 
+FROM product
+base.py: [generated in 0.00046s] ()
+base.py: SELECT picture.id AS picture_id, picture.path AS picture_path, picture.product_id AS picture_product_id 
+FROM picture 
+WHERE ? = picture.product_id
+base.py: [generated in 0.00031s] (1,)
+base.py: ROLLBACK
+_internal.py: 127.0.0.1 - - [20/Nov/2022 18:37:29] "GET /products/ HTTP/1.1" 200 -
+main.py: registered blueprints
+_internal.py: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+_internal.py: [33mPress CTRL+C to quit[0m
+base.py: BEGIN (implicit)
+base.py: SELECT product.id AS product_id, product.name AS product_name, product.description AS product_description 
+FROM product
+base.py: [generated in 0.00030s] ()
+base.py: SELECT picture.id AS picture_id, picture.path AS picture_path, picture.product_id AS picture_product_id 
+FROM picture 
+WHERE ? = picture.product_id
+base.py: [generated in 0.00026s] (1,)
+base.py: ROLLBACK
+_internal.py: 127.0.0.1 - - [20/Nov/2022 18:41:04] "GET /products/ HTTP/1.1" 200 -
+base.py: BEGIN (implicit)
+base.py: SELECT product.id AS product_id, product.name AS product_name, product.description AS product_description 
+FROM product
+base.py: [cached since 0.8616s ago] ()
+base.py: SELECT picture.id AS picture_id, picture.path AS picture_path, picture.product_id AS picture_product_id 
+FROM picture 
+WHERE ? = picture.product_id
+base.py: [cached since 0.8602s ago] (1,)
+base.py: ROLLBACK
+_internal.py: 127.0.0.1 - - [20/Nov/2022 18:41:05] "GET /products/ HTTP/1.1" 200 -
+base.py: BEGIN (implicit)
+base.py: SELECT product.id AS product_id, product.name AS product_name, product.description AS product_description 
+FROM product
+base.py: [cached since 1.714s ago] ()
+base.py: SELECT picture.id AS picture_id, picture.path AS picture_path, picture.product_id AS picture_product_id 
+FROM picture 
+WHERE ? = picture.product_id
+base.py: [cached since 1.713s ago] (1,)
+base.py: ROLLBACK
+_internal.py: 127.0.0.1 - - [20/Nov/2022 18:41:06] "GET /products/ HTTP/1.1" 200 -
+base.py: BEGIN (implicit)
+base.py: SELECT product.id AS product_id, product.name AS product_name, product.description AS product_description 
+FROM product
+base.py: [cached since 2.498s ago] ()
+base.py: SELECT picture.id AS picture_id, picture.path AS picture_path, picture.product_id AS picture_product_id 
+FROM picture 
+WHERE ? = picture.product_id
+base.py: [cached since 2.497s ago] (1,)
+base.py: ROLLBACK
+_internal.py: 127.0.0.1 - - [20/Nov/2022 18:41:06] "GET /products/ HTTP/1.1" 200 -
+base.py: BEGIN (implicit)
+base.py: SELECT product.id AS product_id, product.name AS product_name, product.description AS product_description 
+FROM product
+base.py: [cached since 3.232s ago] ()
+base.py: SELECT picture.id AS picture_id, picture.path AS picture_path, picture.product_id AS picture_product_id 
+FROM picture 
+WHERE ? = picture.product_id
+base.py: [cached since 3.23s ago] (1,)
+base.py: ROLLBACK
+_internal.py: 127.0.0.1 - - [20/Nov/2022 18:41:07] "GET /products/ HTTP/1.1" 200 -
+base.py: BEGIN (implicit)
+base.py: SELECT product.id AS product_id, product.name AS product_name, product.description AS product_description 
+FROM product
+base.py: [cached since 3.677s ago] ()
+base.py: SELECT picture.id AS picture_id, picture.path AS picture_path, picture.product_id AS picture_product_id 
+FROM picture 
+WHERE ? = picture.product_id
+base.py: [cached since 3.677s ago] (1,)
+base.py: ROLLBACK
+_internal.py: 127.0.0.1 - - [20/Nov/2022 18:41:08] "GET /products/ HTTP/1.1" 200 -
+base.py: BEGIN (implicit)
+base.py: SELECT product.id AS product_id, product.name AS product_name, product.description AS product_description 
+FROM product
+base.py: [cached since 4.103s ago] ()
+base.py: SELECT picture.id AS picture_id, picture.path AS picture_path, picture.product_id AS picture_product_id 
+FROM picture 
+WHERE ? = picture.product_id
+base.py: [cached since 4.101s ago] (1,)
+base.py: ROLLBACK
+_internal.py: 127.0.0.1 - - [20/Nov/2022 18:41:08] "GET /products/ HTTP/1.1" 200 -
+base.py: BEGIN (implicit)
+base.py: SELECT product.id AS product_id, product.name AS product_name, product.description AS product_description 
+FROM product
+base.py: [cached since 4.524s ago] ()
+base.py: SELECT picture.id AS picture_id, picture.path AS picture_path, picture.product_id AS picture_product_id 
+FROM picture 
+WHERE ? = picture.product_id
+base.py: [cached since 4.523s ago] (1,)
+base.py: ROLLBACK
+_internal.py: 127.0.0.1 - - [20/Nov/2022 18:41:09] "GET /products/ HTTP/1.1" 200 -
+base.py: BEGIN (implicit)
+base.py: SELECT product.id AS product_id, product.name AS product_name, product.description AS product_description 
+FROM product
+base.py: [cached since 4.945s ago] ()
+base.py: SELECT picture.id AS picture_id, picture.path AS picture_path, picture.product_id AS picture_product_id 
+FROM picture 
+WHERE ? = picture.product_id
+base.py: [cached since 4.945s ago] (1,)
+base.py: ROLLBACK
+_internal.py: 127.0.0.1 - - [20/Nov/2022 18:41:09] "GET /products/ HTTP/1.1" 200 -
+[DEBUG]  registry.py  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  main.py  registered blueprints
+[INFO ]  _internal.py  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  _internal.py  [33mPress CTRL+C to quit[0m
+[DEBUG]  registry.py  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  main.py  registered blueprints
+[INFO ]  _internal.py  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  _internal.py  [33mPress CTRL+C to quit[0m
+[INFO ]  base.py  BEGIN (implicit)
+[INFO ]  base.py  SELECT product.id AS product_id, product.name AS product_name, product.description AS product_description 
+FROM product
+[INFO ]  base.py  [generated in 0.00030s] ()
+[INFO ]  base.py  SELECT picture.id AS picture_id, picture.path AS picture_path, picture.product_id AS picture_product_id 
+FROM picture 
+WHERE ? = picture.product_id
+[INFO ]  base.py  [generated in 0.00024s] (1,)
+[INFO ]  product_route.py  listed all products
+[INFO ]  base.py  ROLLBACK
+[INFO ]  _internal.py  127.0.0.1 - - [20/Nov/2022 18:59:06] "GET /products/ HTTP/1.1" 200 -
+[DEBUG]  registry.py  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  main.py  registered blueprints
+[INFO ]  _internal.py  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  _internal.py  [33mPress CTRL+C to quit[0m
+[INFO ]  product_route.py  listed all products
+[INFO ]  _internal.py  127.0.0.1 - - [20/Nov/2022 19:02:50] "GET /products/ HTTP/1.1" 200 -
+[INFO ]  product_route.py  listed all products
+[INFO ]  _internal.py  127.0.0.1 - - [20/Nov/2022 19:03:02] "GET /products/ HTTP/1.1" 200 -
+[INFO ]  product_route.py  listed all products
+[INFO ]  _internal.py  127.0.0.1 - - [20/Nov/2022 19:03:02] "GET /products/ HTTP/1.1" 200 -
+[INFO ]  product_route.py  listed all products
+[INFO ]  _internal.py  127.0.0.1 - - [20/Nov/2022 19:03:03] "GET /products/ HTTP/1.1" 200 -
+[INFO ]  product_route.py  listed all products
+[INFO ]  _internal.py  127.0.0.1 - - [20/Nov/2022 19:03:04] "GET /products/ HTTP/1.1" 200 -
+[INFO ]  product_route.py  listed all products
+[INFO ]  _internal.py  127.0.0.1 - - [20/Nov/2022 19:03:04] "GET /products/ HTTP/1.1" 200 -
+[INFO ]  product_route.py  listed all products
+[INFO ]  _internal.py  127.0.0.1 - - [20/Nov/2022 19:03:05] "GET /products/ HTTP/1.1" 200 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [product_route.py]  listed all products
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 19:04:44] "GET /products/ HTTP/1.1" 200 -
+[INFO ]  [product_route.py]  listed all products
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 19:04:46] "GET /products/ HTTP/1.1" 200 -
+[INFO ]  [product_route.py]  listed all products
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 19:04:46] "GET /products/ HTTP/1.1" 200 -
+[INFO ]  [product_route.py]  listed all products
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 19:04:47] "GET /products/ HTTP/1.1" 200 -
