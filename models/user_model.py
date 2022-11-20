@@ -9,7 +9,7 @@ class UserRole(db.Model, BaseModel):
     __tablename__ = "user_role"
 
     id = db.Column(db.Integer(), primary_key=True)
-    name = db.Column(db.String(50))
+    name = db.Column(db.String(50), nullable=False)
     users = db.relationship("User", backref="role")
 
 
@@ -17,9 +17,9 @@ class UserRoleSchema(ma.Schema):
     class Meta:
         fields = ('id', 'name')
 
-    id = ma.Number()
+    id = ma.Number(dump_only=True)
     name = ma.String()
-    
+
 
 class User(db.Model, BaseModel):
     __tablename__ = "user"
@@ -52,9 +52,8 @@ class User(db.Model, BaseModel):
 class UserSchema(ma.Schema):
     class Meta:
         fileds = ('id', 'name', 'password', 'role')
-        
+
     id = ma.Number(dump_only=True)
     name = ma.String()
     password = ma.String()
     role = ma.Nested(UserRoleSchema)
-    

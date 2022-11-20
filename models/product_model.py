@@ -7,8 +7,8 @@ class Product(db.Model, BaseModel):
     __tablename__  = "product"
     
     id = db.Column(db.Integer(), primary_key=True)
-    name = db.Column(db.String(60))
-    description = db.Column(db.String(250))
+    name = db.Column(db.String(60), nullable=False)
+    description = db.Column(db.String(250), nullable=False)
     pictures = db.relationship("Picture", cascade="all,delete")
 
 

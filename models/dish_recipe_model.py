@@ -1,6 +1,9 @@
 from utils.database import db
 from utils.schema import ma
 from models.base_model import BaseModel
+from models.picture_model import PictureSchema
+from models.product_model import  ProductSchema
+
 
 recipe_product = db.Table(
     "recipe_product",
@@ -22,10 +25,18 @@ class DishRecipe(db.Model, BaseModel):
 
     id = db.Column(db.Integer(), primary_key=True)
     name = db.Column(db.String(80), nullable=False)
-    recipe = db.Column(db.String())
+    recipe = db.Column(db.String(500), nullable=False)
     products = db.relationship("Product", secondary=recipe_product, backref="dishes")
     pictures = db.relationship("Picture", secondary=recipe_picture)
 
 
 class DishRecipeSchema(ma.Schema):
-    pass
+    class Meta:
+        fields = ('id', 'name', 'recipe', 'products', 'pritures')
+        
+    id = ma.Number(dump_only=True)
+    name = ma.String()
+    recipe = ma.String()
+    products = ma.Nested(ProductSchema, many=True)
+    pictures = ma.Nested(PictureSchema, many=True)
+    

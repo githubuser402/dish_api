@@ -7,9 +7,14 @@ class RecipeType(db.Model, BaseModel):
     __tablename__ = "dish_recipe_type"
     
     id = db.Column(db.Integer(), primary_key=True)
-    name = db.Column(db.String(50))
-    description = db.Column(db.String(200))
+    name = db.Column(db.String(50), nullable=False)
+    description = db.Column(db.String(200), nullable=False)
 
 
 class RecipeTypeSchema(ma.Schema):
-    pass
+    class Meta:
+        fields = ('id', 'name', 'description')
+        
+    id = ma.Number(dump_only=True)
+    name = ma.String()
+    description = ma.String()
