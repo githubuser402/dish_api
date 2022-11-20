@@ -165,3 +165,514 @@ WHERE ? = picture.product_id
 [INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 19:04:46] "GET /products/ HTTP/1.1" 200 -
 [INFO ]  [product_route.py]  listed all products
 [INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 19:04:47] "GET /products/ HTTP/1.1" 200 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 19:07:08] "[32mGET /products/3 HTTP/1.1[0m" 308 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 19:07:13] "[33mGET /products/3/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 19:07:16] "GET /products/1/ HTTP/1.1" 200 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 19:11:01] "[31m[1mPOST /products/ HTTP/1.1[0m" 400 -
+[WARNI]  [product_route.py]  wrong data: {'descripton': ['Unknown field.'], 'picture': ['Unknown field.']}
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 19:11:16] "[31m[1mPOST /products/ HTTP/1.1[0m" 422 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 21:55:42] "[33mGET /dishes/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 21:55:48] "[33mGET /recipe/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 21:55:49] "[33mGET /recipes/ HTTP/1.1[0m" 404 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 21:56:19] "[35m[1mGET /recipes/ HTTP/1.1[0m" 500 -
+[ERROR]  [_internal.py]  Error on request:
+Traceback (most recent call last):
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 335, in run_wsgi
+    execute(self.server.app)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 322, in execute
+    application_iter = app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/sda/Documents/projects/rest_menu/src/routes/recipe_route.py", line 23, in get_all_recipes
+    return response_with(resp.SUCCESS_200, values=recipe_json)
+TypeError: response_with() got an unexpected keyword argument 'values'
+[INFO ]  [product_route.py]  listed all products
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 21:56:44] "GET /products/ HTTP/1.1" 200 -
+[INFO ]  [product_route.py]  listed all products
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 21:56:53] "GET /products/ HTTP/1.1" 200 -
+[INFO ]  [product_route.py]  listed all products
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 21:56:54] "GET /products/ HTTP/1.1" 200 -
+[INFO ]  [product_route.py]  listed all products
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 21:56:55] "GET /products/ HTTP/1.1" 200 -
+[INFO ]  [product_route.py]  listed all products
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 21:56:56] "GET /products/ HTTP/1.1" 200 -
+[INFO ]  [product_route.py]  listed all products
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 21:56:56] "GET /products/ HTTP/1.1" 200 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 21:57:03] "[35m[1mGET /recipes/ HTTP/1.1[0m" 500 -
+[ERROR]  [_internal.py]  Error on request:
+Traceback (most recent call last):
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 335, in run_wsgi
+    execute(self.server.app)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 322, in execute
+    application_iter = app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/sda/Documents/projects/rest_menu/src/routes/recipe_route.py", line 23, in get_all_recipes
+    return response_with(resp.SUCCESS_200, values=recipe_json)
+TypeError: response_with() got an unexpected keyword argument 'values'
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 21:57:48] "GET /recipes/ HTTP/1.1" 200 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 21:57:49] "GET /recipes/ HTTP/1.1" 200 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 21:57:51] "GET /recipes/ HTTP/1.1" 200 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 21:57:51] "GET /recipes/ HTTP/1.1" 200 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 21:57:52] "GET /recipes/ HTTP/1.1" 200 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:06:26] "[31m[1mPOST /recipes/ HTTP/1.1[0m" 400 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:07:20] "[31m[1mPOST /recipes/ HTTP/1.1[0m" 422 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:07:24] "[31m[1mPOST /recipes/ HTTP/1.1[0m" 422 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:09:56] "[31m[1mPOST /recipes/ HTTP/1.1[0m" 422 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:10:07] "[31m[1mPOST /recipes/ HTTP/1.1[0m" 422 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:10:59] "[31m[1mPOST /recipes/ HTTP/1.1[0m" 422 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:11:03] "[31m[1mPOST /recipes/ HTTP/1.1[0m" 422 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:11:04] "[31m[1mPOST /recipes/ HTTP/1.1[0m" 422 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:11:05] "[31m[1mPOST /recipes/ HTTP/1.1[0m" 422 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:11:05] "[31m[1mPOST /recipes/ HTTP/1.1[0m" 422 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:11:06] "[31m[1mPOST /recipes/ HTTP/1.1[0m" 422 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:11:06] "[31m[1mPOST /recipes/ HTTP/1.1[0m" 422 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:11:07] "[31m[1mPOST /recipes/ HTTP/1.1[0m" 422 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:11:07] "[31m[1mPOST /recipes/ HTTP/1.1[0m" 422 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[DEBUG]  [recipe_route.py]  {'recipe': 'Wash the potatoes. Cut them into thin slices, about 1/4” inch thick.Heat the butter and olive oil in a large skillet over medium high heat.Add the potatoes and cook them for 10 to 12 minutes until browned, flipping occasionally until all sides are browned. Sprinkle with seasoning and serve hot.', 'name': 'fried potatoes'}
+[INFO ]  [recipe_route.py]  saved recipe: <1 fried potatoes>
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:11:28] "[35m[1mPOST /recipes/ HTTP/1.1[0m" 201 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:13:14] "[35m[1mGET /recipes/1/ HTTP/1.1[0m" 500 -
+[ERROR]  [_internal.py]  Error on request:
+Traceback (most recent call last):
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 335, in run_wsgi
+    execute(self.server.app)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 322, in execute
+    application_iter = app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/sda/Documents/projects/rest_menu/src/routes/recipe_route.py", line 34, in get_recipe
+    recipe_json = recipe_schema.dump(recipe)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/marshmallow/schema.py", line 557, in dump
+    result = self._serialize(processed_obj, many=many)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/marshmallow/schema.py", line 519, in _serialize
+    return [
+TypeError: 'DishRecipe' object is not iterable
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:13:54] "GET /recipes/1/ HTTP/1.1" 200 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:13:59] "GET /recipes/1/ HTTP/1.1" 200 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:15:52] "GET /recipes/1/ HTTP/1.1" 200 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:16:26] "GET /recipes/1/ HTTP/1.1" 200 -
+[WARNI]  [recipe_route.py]  400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:22:25] "[31m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 400 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:23:07] "[31m[1mpicture@~/Downloads/fried_potatoes.jpg /recipes/1/pictures/ HTTP/1.1[0m" 405 -
+[WARNI]  [recipe_route.py]  400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:23:18] "[31m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 400 -
+[WARNI]  [recipe_route.py]  400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:25:47] "[31m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 400 -
+[WARNI]  [recipe_route.py]  400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:26:43] "[31m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 400 -
+[WARNI]  [recipe_route.py]  400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:26:58] "[31m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 400 -
+[WARNI]  [recipe_route.py]  400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:27:06] "[31m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 400 -
+[WARNI]  [recipe_route.py]  400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:28:47] "[31m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 400 -
+[WARNI]  [recipe_route.py]  400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:58:05] "[31m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 400 -
+[WARNI]  [recipe_route.py]  400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:58:12] "[31m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 400 -
+[WARNI]  [recipe_route.py]  400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:58:23] "[31m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 400 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:58:52] "[32mGET /recipes HTTP/1.1[0m" 308 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:58:55] "GET /recipes/ HTTP/1.1" 200 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:59:00] "GET /recipes/1/ HTTP/1.1" 200 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:59:15] "[32mGET /recipes/1/pictures HTTP/1.1[0m" 308 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 22:59:39] "[35m[1mGET /recipes/1/pictures/ HTTP/1.1[0m" 500 -
+[ERROR]  [_internal.py]  Error on request:
+Traceback (most recent call last):
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 335, in run_wsgi
+    execute(self.server.app)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 322, in execute
+    application_iter = app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/sda/Documents/projects/rest_menu/src/routes/recipe_route.py", line 77, in get_recipe_pictures
+    recipe = DishRecipe.query.filter_by(recipe_id).first()
+TypeError: filter_by() takes 1 positional argument but 2 were given
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:01:08] "[35m[1mGET /recipes/1/pictures/ HTTP/1.1[0m" 500 -
+[ERROR]  [_internal.py]  Error on request:
+Traceback (most recent call last):
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 335, in run_wsgi
+    execute(self.server.app)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 322, in execute
+    application_iter = app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/sda/Documents/projects/rest_menu/src/routes/recipe_route.py", line 77, in get_recipe_pictures
+    recipe = DishRecipe.query.filter_by(id=recipe_id).first()
+TypeError: filter_by() takes 1 positional argument but 2 were given
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[DEBUG]  [recipe_route.py]  []
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:01:17] "GET /recipes/1/pictures/ HTTP/1.1" 200 -
+[WARNI]  [recipe_route.py]  400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:01:26] "[31m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 400 -
+[WARNI]  [recipe_route.py]  400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:04:58] "[31m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 400 -
+[WARNI]  [recipe_route.py]  400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:05:10] "[31m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 400 -
+[WARNI]  [recipe_route.py]  400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:06:55] "[31m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 400 -
+[WARNI]  [recipe_route.py]  400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:08:08] "[31m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 400 -
+[WARNI]  [recipe_route.py]  400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:08:19] "[31m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 400 -
+[DEBUG]  [recipe_route.py]  <1 fried potatoes>
+[DEBUG]  [recipe_route.py]  filename: fried_potatoes_caa13c2cd7.jpg
+[DEBUG]  [recipe_route.py]  [{'path': '/media/fried_potatoes_caa13c2cd7.jpg', 'id': 1.0}]
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:09:18] "[35m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 201 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:09:46] "[33mGET /recipes. HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:09:49] "[32mGET /recipes HTTP/1.1[0m" 308 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:09:49] "GET /recipes/ HTTP/1.1" 200 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:10:18] "GET /media/fried_potatoes_caa13c2cd7.jpg HTTP/1.1" 200 -
+[DEBUG]  [recipe_route.py]  <1 fried potatoes>
+[INFO ]  [recipe_route.py]  document with invalid extension: Sauteed-Potatoes-tall-FS-26.webp
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:15:05] "[31m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 422 -
+[DEBUG]  [recipe_route.py]  <1 fried potatoes>
+[DEBUG]  [recipe_route.py]  filename: pan-roasted-potatoes-2_0285be331b.jpg
+[DEBUG]  [recipe_route.py]  [{'path': '/media/fried_potatoes_caa13c2cd7.jpg', 'id': 1.0}, {'path': '/media/pan-roasted-potatoes-2_0285be331b.jpg', 'id': 2.0}]
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:16:45] "[35m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 201 -
+[DEBUG]  [recipe_route.py]  <1 fried potatoes>
+[DEBUG]  [recipe_route.py]  filename: pan-roasted-potatoes-2_51a2df6659.jpg
+[DEBUG]  [recipe_route.py]  [{'path': '/media/fried_potatoes_caa13c2cd7.jpg', 'id': 1.0}, {'path': '/media/pan-roasted-potatoes-2_0285be331b.jpg', 'id': 2.0}, {'path': '/media/pan-roasted-potatoes-2_51a2df6659.jpg', 'id': 3.0}]
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:16:54] "[35m[1mPOST /recipes/1/pictures/ HTTP/1.1[0m" 201 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:42:42] "[33mGET /recipe/1/pictures/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:42:48] "[33mGET /recipe/1/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:42:57] "[33mGET /recipe/1/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:43:00] "GET /recipes/1/ HTTP/1.1" 200 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:43:05] "GET /recipes/1/ HTTP/1.1" 200 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:43:35] "[35m[1mDELETE /recipes/1/pictures/3/ HTTP/1.1[0m" 500 -
+[ERROR]  [_internal.py]  Error on request:
+Traceback (most recent call last):
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 335, in run_wsgi
+    execute(self.server.app)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 322, in execute
+    application_iter = app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: delete_recipe_picture() got an unexpected keyword argument 'recipe_id'
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:43:37] "[32mDELETE /recipes/1/pictures/3 HTTP/1.1[0m" 308 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:44:26] "[32mDELETE /recipes/1/pictures/3 HTTP/1.1[0m" 308 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:44:32] "[35m[1mDELETE /recipes/1/pictures/3/ HTTP/1.1[0m" 500 -
+[ERROR]  [_internal.py]  Error on request:
+Traceback (most recent call last):
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 335, in run_wsgi
+    execute(self.server.app)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 322, in execute
+    application_iter = app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/sda/Documents/projects/rest_menu/src/routes/recipe_route.py", line 140, in delete_recipe_picture
+    for picture in recipe:
+TypeError: 'DishRecipe' object is not iterable
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:45:00] "[35m[1mDELETE /recipes/1/pictures/3/ HTTP/1.1[0m" 500 -
+[ERROR]  [_internal.py]  Error on request:
+Traceback (most recent call last):
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 335, in run_wsgi
+    execute(self.server.app)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 322, in execute
+    application_iter = app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'recipe_routes.delete_recipe_picture' did not return a valid response. The function either returned None or ended without a return statement.
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[DEBUG]  [recipe_route.py]  deleting picture: None
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:47:33] "[35m[1mDELETE /recipes/1/pictures/3/ HTTP/1.1[0m" 500 -
+[ERROR]  [_internal.py]  Error on request:
+Traceback (most recent call last):
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 335, in run_wsgi
+    execute(self.server.app)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 322, in execute
+    application_iter = app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/sda/Documents/projects/rest_menu/src/routes/recipe_route.py", line 149, in delete_recipe_picture
+    filename = os.path.basename(picture_to_delete.path)
+AttributeError: 'NoneType' object has no attribute 'path'
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:49:31] "[33mDELETE /recipes/1/pictures/3/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:49:33] "[33mDELETE /recipes/1/pictures/3/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:49:41] "GET /recipes/1/ HTTP/1.1" 200 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:49:51] "GET /recipes/1/ HTTP/1.1" 200 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:50:52] "GET /recipes/1/ HTTP/1.1" 200 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:50:58] "[33mDELETE /recipes/1/pictures/3/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:51:07] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[DEBUG]  [recipe_route.py]  <1 3c2cd7.jpg>
+[DEBUG]  [recipe_route.py]  <2 be331b.jpg>
+[DEBUG]  [recipe_route.py]  <3 df6659.jpg>
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:52:03] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[DEBUG]  [recipe_route.py]  <1 3c2cd7.jpg>
+[DEBUG]  [recipe_route.py]  <2 be331b.jpg>
+[DEBUG]  [recipe_route.py]  <3 df6659.jpg>
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:52:45] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[DEBUG]  [recipe_route.py]  <1 3c2cd7.jpg>
+[DEBUG]  [recipe_route.py]  <2 be331b.jpg>
+[DEBUG]  [recipe_route.py]  <3 df6659.jpg>
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:52:57] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[DEBUG]  [recipe_route.py]  <1 3c2cd7.jpg>
+[DEBUG]  [recipe_route.py]  <2 be331b.jpg>
+[DEBUG]  [recipe_route.py]  <3 df6659.jpg>
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:53:47] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:54:50] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:54:52] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:54:53] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:54:53] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:54:54] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:54:54] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:54:54] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:54:55] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:54:55] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:54:56] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:59:05] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[WARNI]  [recipe_route.py]  picture not found
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:59:35] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[WARNI]  [recipe_route.py]  picture not found
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:59:37] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[WARNI]  [recipe_route.py]  picture not found
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:59:40] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:59:51] "GET /recipes/1/ HTTP/1.1" 200 -

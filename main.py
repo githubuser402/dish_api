@@ -1,4 +1,5 @@
 from config.app_config import DevelopmentConfig
+from config.config import Config
 from flask import Flask
 from utils.database import db
 from utils.schema import ma
@@ -13,6 +14,7 @@ from flask_cors import CORS
 from routes.product_route import product_routes
 from routes.recipe_route import recipe_routes
 from routes.user_route import user_routes
+from routes.document_route import document_routes
 
 # models
 from models.dish_recipe_model import DishRecipe
@@ -40,10 +42,11 @@ CORS(app=app, resources={r'/*': {'origins': '*'}})
 
 logger.info("registered blueprints")
 # register blueprints
-app.register_blueprint(recipe_routes, url_prefix="/ricipes/")
+app.register_blueprint(recipe_routes, url_prefix="/recipes/")
 app.register_blueprint(product_routes, url_prefix="/products/")
 app.register_blueprint(user_routes, url_prefix="/user/")
-
+app.register_blueprint(document_routes, url_prefix=Config.MEDIA_URL)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.debug = True
+    app.run()

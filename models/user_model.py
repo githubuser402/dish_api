@@ -12,6 +12,9 @@ class UserRole(db.Model, BaseModel):
     name = db.Column(db.String(50), nullable=False)
     users = db.relationship("User", backref="role")
 
+    def __repr__(self):
+        return f"<{self.id} {self.name}>"
+
 
 class UserRoleSchema(ma.Schema):
     class Meta:

@@ -8,7 +8,9 @@ class Picture(db.Model, BaseModel):
     
     id = db.Column(db.Integer(), primary_key=True)
     path = db.Column(db.String(140), nullable=False)
-    product_id = db.Column(db.Integer(), db.ForeignKey("product.id"))
+
+    def __repr__(self):
+        return f"<{self.id} {self.path[-10:]}>"
 
 
 class PictureSchema(ma.Schema):

@@ -10,6 +10,9 @@ class RecipeType(db.Model, BaseModel):
     name = db.Column(db.String(50), nullable=False)
     description = db.Column(db.String(200), nullable=False)
 
+    def __repr__(self):
+        return f"<{self.id} {self.name}>"
+
 
 class RecipeTypeSchema(ma.Schema):
     class Meta:

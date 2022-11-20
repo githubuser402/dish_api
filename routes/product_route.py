@@ -1,4 +1,4 @@
-from flask import Blueprint, request
+from flask import Blueprint, request, send_from_directory
 from utils.response import response_with
 import utils.response as resp
 
@@ -31,8 +31,8 @@ def get_product(product_id):
         return response_with(resp.SERVER_ERROR_404)
     
     product_json = product_schema.dump(product)
-    print(product_json)
 
+    logger.info(f"queried product: {product_id}")
     return response_with(resp.SUCCESS_200, value=product_json)
 
 
@@ -46,15 +46,18 @@ def create_product():
         print(cleaned_data)
         
         product = Product(**cleaned_data)
+        
         product.save()
+        logger.info(f"saved product: {product.name}")
         
         return response_with(resp.SUCCESS_201, value=product_schema.dump(product))
     except Exception as ex:
+        logger.warning(f"wrong data: {ex}")
         return response_with(resp.INVALID_INPUT_422)
 
 
 @product_routes.route("/<product_id>/", methods=["PATCH"])
-def patch_product(product_id):
+def path_product(product_id):
     return response_with(resp.SUCCESS_200)
 
 
@@ -63,13 +66,14 @@ def delete_product(product_id):
     product = Product.query.filter_by(id=product_id).first()
     
     if product:
+        logger.info(f"deleted product: {product}")
         product.delete()
-        
+   
     return response_with(resp.SUCCESS_204)
 
 
 @product_routes.route("/<product_id>/pictures/", methods=["GET"])
-def get_product_pictures(product_id):
+def get_product_pictures_list(product_id):
     pass
 
 
