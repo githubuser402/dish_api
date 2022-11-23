@@ -132,38 +132,24 @@ def upload_recipe_picture(recipe_id):
 
 @recipe_routes.route("/<product_id>/pictures/<picture_id>/", methods=["DELETE"])
 def delete_recipe_picture(product_id, picture_id):
-    # recipe = DishRecipe.query.filter_by(id=product_id).first()
+    picture = db.session.query(Picture).filter(Picture.id == picture_id).\
+    join(Picture.dish).filter(DishRecipe.id == product_id).first()
 
-    # if not recipe:
-    #     return response_with(resp.SERVER_ERROR_404)
-
-    # try: 
-    #     picture_to_delete = list(filter(lambda picture: picture.id == picture_id, recipe.pictures))[0]
-    # except Exception as ex:
-    #     logger.warning(f"picture not found")
-    #     return response_with(resp.SERVER_ERROR_404)
-
-    # logger.debug("delete: ", type(picture_to_delete))
+    if not picture:
+        return response_with(resp.SERVER_ERROR_404)
     
-    # if not picture_to_delete:
-    #     return response_with(resp.SERVER_ERROR_404)
-
-    # logger.debug(f"deleting picture: {picture_to_delete}")
-
-    # filename = os.path.basename(picture_to_delete.path)
-
-    # try:
-    #     os.remove(
-    #         os.path.join(Config.MEDIAFILES_FOLDER, filename)
-    #     )
-    #     picture_to_delete.delete()
+    try:
         
-    #     recipe.save()
+        logger.info(f"deleting picture: {picture}")
         
-    #     logger.info(f"deleted picture: {filename}")
+        logger.debug(f"{Config.BASE_DIR + picture.path} exists: {bool(os.path.isfile(Config.BASE_DIR + picture.path))}")
 
-    #     return response_with(resp.SUCCESS_204)
-    # except Exception as ex:
-    #     logger.error(ex)
-    #     return response_with(resp.SERVER_ERROR_500)
-    pass
+        os.remove(Config.BASE_DIR + picture.path)
+        picture.delete()
+
+        logger.info("picture deleted")
+
+        return response_with(resp.SUCCESS_204)
+    except Exception as ex:
+        logger.error(ex)        
+        return response_with(resp.SERVER_ERROR_500)

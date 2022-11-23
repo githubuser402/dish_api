@@ -676,3 +676,171 @@ AttributeError: 'NoneType' object has no attribute 'path'
 [WARNI]  [recipe_route.py]  picture not found
 [INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:59:40] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
 [INFO ]  [_internal.py]  127.0.0.1 - - [20/Nov/2022 23:59:51] "GET /recipes/1/ HTTP/1.1" 200 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 22:40:50] "[32mDELETE /recipes/1/pictures/2 HTTP/1.1[0m" 308 -
+[INFO ]  [recipe_route.py]  deleted picture: <2 be331b.jpg>
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 22:40:54] "[35m[1mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 204 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 22:41:20] "GET /recipes/ HTTP/1.1" 200 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 22:41:33] "[33mGET /recipes/4/ HTTP/1.1[0m" 404 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 22:41:39] "GET /recipes/1/ HTTP/1.1" 200 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 22:50:39] "GET /recipes/1/ HTTP/1.1" 200 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 22:50:43] "GET /recipes/1/ HTTP/1.1" 200 -
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 22:51:07] "[33mDELETE /recipes/1/pictures/2/ HTTP/1.1[0m" 404 -
+[INFO ]  [recipe_route.py]  deleting picture: <1 3c2cd7.jpg>
+[ERROR]  [recipe_route.py]  [Errno 2] No such file or directory: '/media/fried_potatoes_caa13c2cd7.jpg'
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 22:51:14] "[35m[1mDELETE /recipes/1/pictures/1/ HTTP/1.1[0m" 500 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [recipe_route.py]  deleting picture: <1 3c2cd7.jpg>
+[ERROR]  [recipe_route.py]  [Errno 2] No such file or directory: '/media/fried_potatoes_caa13c2cd7.jpg'
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 22:51:48] "[35m[1mDELETE /recipes/1/pictures/1/ HTTP/1.1[0m" 500 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [recipe_route.py]  deleting picture: <1 3c2cd7.jpg>
+[DEBUG]  [recipe_route.py]  /media/fried_potatoes_caa13c2cd7.jpg
+[ERROR]  [recipe_route.py]  [Errno 2] No such file or directory: '/media/fried_potatoes_caa13c2cd7.jpg'
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 22:52:49] "[35m[1mDELETE /recipes/1/pictures/1/ HTTP/1.1[0m" 500 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [recipe_route.py]  deleting picture: <1 3c2cd7.jpg>
+[DEBUG]  [recipe_route.py]  /mnt/sda/Documents/projects/rest_menu/src
+[ERROR]  [recipe_route.py]  [Errno 2] No such file or directory: '/media/fried_potatoes_caa13c2cd7.jpg'
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 22:53:20] "[35m[1mDELETE /recipes/1/pictures/1/ HTTP/1.1[0m" 500 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [recipe_route.py]  deleting picture: <1 3c2cd7.jpg>
+[DEBUG]  [recipe_route.py]  /mnt/sda/Documents/projects/rest_menu/src/media/
+[ERROR]  [recipe_route.py]  [Errno 2] No such file or directory: '/media/fried_potatoes_caa13c2cd7.jpg'
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 22:57:03] "[35m[1mDELETE /recipes/1/pictures/1/ HTTP/1.1[0m" 500 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [recipe_route.py]  deleting picture: <1 3c2cd7.jpg>
+[DEBUG]  [recipe_route.py]  /mnt/sda/Documents/projects/rest_menu/src/media/
+[ERROR]  [recipe_route.py]  [Errno 2] No such file or directory: '/media/fried_potatoes_caa13c2cd7.jpg'
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 22:58:08] "[35m[1mDELETE /recipes/1/pictures/1/ HTTP/1.1[0m" 500 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [recipe_route.py]  deleting picture: <1 3c2cd7.jpg>
+[DEBUG]  [recipe_route.py]  /mnt/sda/Documents/projects/rest_menu/src
+[ERROR]  [recipe_route.py]  [Errno 2] No such file or directory: '/media/fried_potatoes_caa13c2cd7.jpg'
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 22:59:42] "[35m[1mDELETE /recipes/1/pictures/1/ HTTP/1.1[0m" 500 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [recipe_route.py]  deleting picture: <1 3c2cd7.jpg>
+[ERROR]  [recipe_route.py]  [Errno 2] No such file or directory: '/media/fried_potatoes_caa13c2cd7.jpg'
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 23:00:38] "[35m[1mDELETE /recipes/1/pictures/1/ HTTP/1.1[0m" 500 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [recipe_route.py]  deleting picture: <1 3c2cd7.jpg>
+[DEBUG]  [recipe_route.py]  /media/fried_potatoes_caa13c2cd7.jpg
+[ERROR]  [recipe_route.py]  [Errno 2] No such file or directory: '/media/fried_potatoes_caa13c2cd7.jpg'
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 23:01:32] "[35m[1mDELETE /recipes/1/pictures/1/ HTTP/1.1[0m" 500 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [recipe_route.py]  deleting picture: <1 3c2cd7.jpg>
+[DEBUG]  [recipe_route.py]  /mnt/sda/Documents/projects/rest_menu/src
+[DEBUG]  [recipe_route.py]  /media/fried_potatoes_caa13c2cd7.jpg
+[ERROR]  [recipe_route.py]  [Errno 2] No such file or directory: '/media/fried_potatoes_caa13c2cd7.jpg'
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 23:03:46] "[35m[1mDELETE /recipes/1/pictures/1/ HTTP/1.1[0m" 500 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [recipe_route.py]  deleting picture: <1 3c2cd7.jpg>
+[DEBUG]  [recipe_route.py]  /mnt/sda/Documents/projects/rest_menu/src/media/fried_potatoes_caa13c2cd7.jpg exists: True
+[ERROR]  [recipe_route.py]  [Errno 2] No such file or directory: '/media/fried_potatoes_caa13c2cd7.jpg'
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 23:11:18] "[35m[1mDELETE /recipes/1/pictures/1/ HTTP/1.1[0m" 500 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [recipe_route.py]  deleting picture: <1 3c2cd7.jpg>
+[DEBUG]  [recipe_route.py]  /mnt/sda/Documents/projects/rest_menu/src/media/fried_potatoes_caa13c2cd7.jpg exists: True
+[INFO ]  [recipe_route.py]  picture deleted
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 23:11:47] "[35m[1mDELETE /recipes/1/pictures/1/ HTTP/1.1[0m" 500 -
+[ERROR]  [_internal.py]  Error on request:
+Traceback (most recent call last):
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 335, in run_wsgi
+    execute(self.server.app)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/werkzeug/serving.py", line 322, in execute
+    application_iter = app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "/mnt/sda/Documents/projects/rest_menu/env/lib64/python3.9/site-packages/flask/app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'recipe_routes.delete_recipe_picture' did not return a valid response. The function either returned None or ended without a return statement.
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 23:12:16] "[33mDELETE /recipes/1/pictures/1/ HTTP/1.1[0m" 404 -
+[DEBUG]  [recipe_route.py]  [<3 df6659.jpg>]
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 23:12:25] "GET /recipes/1/pictures/ HTTP/1.1" 200 -
+[DEBUG]  [recipe_route.py]  [<3 df6659.jpg>]
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 23:12:34] "GET /recipes/1/pictures/ HTTP/1.1" 200 -

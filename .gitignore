@@ -1,3 +1,4 @@
 ./log/*
 ./*{.sqlite,.sqlite3,.db,.db3,.s3db,.sl3}
 ./db.sqlite3
+./media/*
