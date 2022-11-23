@@ -844,3 +844,31 @@ TypeError: The view function for 'recipe_routes.delete_recipe_picture' did not r
 [INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 23:12:25] "GET /recipes/1/pictures/ HTTP/1.1" 200 -
 [DEBUG]  [recipe_route.py]  [<3 df6659.jpg>]
 [INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 23:12:34] "GET /recipes/1/pictures/ HTTP/1.1" 200 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[INFO ]  [_internal.py]  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[INFO ]  [_internal.py]  [33mPress CTRL+C to quit[0m
+[INFO ]  [product_route.py]  listed all products
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 23:21:50] "GET /products/ HTTP/1.1" 200 -
+[WARNI]  [product_route.py]  wrong data: (sqlite3.IntegrityError) NOT NULL constraint failed: product.description
+[SQL: INSERT INTO product (name, description) VALUES (?, ?)]
+[parameters: ('cucumber', None)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[INFO ]  [_internal.py]  127.0.0.1 - - [23/Nov/2022 23:23:20] "[31m[1mPOST /products/ HTTP/1.1[0m" 422 -
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints
+[DEBUG]  [registry.py]  registered 'pbkdf2_sha256' handler: <class 'passlib.handlers.pbkdf2.pbkdf2_sha256'>
+[INFO ]  [main.py]  registered blueprints

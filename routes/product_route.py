@@ -74,9 +74,18 @@ def delete_product(product_id):
 
 @product_routes.route("/<product_id>/pictures/", methods=["GET"])
 def get_product_pictures_list(product_id):
-    pass
-
-
+    picture_schema = PictureSchema(many=True)
+    
+    product = Product.query.filter_by(id=product_id).first()
+    
+    if not product:
+        return response_with(resp.SERVER_ERROR_404)
+    
+    pictures_json = picture_schema.dump(product.pictures)
+    
+    return response_with(resp.SUCCESS_200, value=pictures_json)
+    
+    
 @product_routes.route("/<product_id>/pictures/", methods=["POST"])
 def upload_product_picture(product_id):
     pass
