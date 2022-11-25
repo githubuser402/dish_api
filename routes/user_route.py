@@ -24,7 +24,9 @@ def register_user():
         user = User(**cleared_data)
         user.save()
 
-        return response_with(resp.SUCCESS_201, message="User was created successfully.")
+        token = Token.encode(id=user.id)
+
+        return response_with(resp.SUCCESS_201, value={"token": token}, message="User was created successfully.")
 
     except Exception as ex:
         print(ex)
@@ -54,6 +56,6 @@ def login_user():
     return response_with(resp.SUCCESS_200, value={"token": token})
 
 
-@user_routes.route("/<user_id>", methods=["GET"])
-def get_user(user_id):
-    return response_with(resp.SUCCESS_200)
+# @user_routes.route("/<user_id>", methods=["GET"])
+# def get_user(user_id):
+#     return response_with(resp.SUCCESS_200)

@@ -60,18 +60,13 @@ SUCCESS_204 = {
 
 
 def response_with(status, value=None, message=None):
-    data = {}
+    if not value:
+        return jsonify({}), status["http_code"]
+    elif all([not isinstance(value, dict), not isinstance(value, list)]):
+         raise Exception(f"Valid type wasn't provided. Type: {type(value)}")
 
-    # if value != None and not isinstance(value, dict):
-    #     raise Exception(f"dict wasnt provided. Value: {type(value)}")
-    if value != None:
-        data['data'] = value
+    return jsonify(value), status["http_code"]
 
-    data['status'] = status['code']
 
-    if message != None and isinstance(message, str):
-        data['message'] = message
-    elif status.get("message"):
-        data['message'] = status['message']
 
-    return jsonify(data), status["http_code"]
+
