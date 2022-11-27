@@ -1,6 +1,7 @@
 from flask import Blueprint, request, send_from_directory
 from utils.response import response_with
 import utils.response as resp
+from utils.decorators import token_required
 
 from utils.logger import logger
 

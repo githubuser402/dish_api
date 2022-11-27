@@ -4,6 +4,7 @@ import utils.response as resp
 from utils.logger import logger
 from utils.document_filter import is_allowed_file, generate_filename
 from utils.database import db
+from utils.decorators import token_required
 from werkzeug.utils import secure_filename
 import os
 

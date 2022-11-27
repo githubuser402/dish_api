@@ -17,6 +17,7 @@ class Product(db.Model, BaseModel):
     name = db.Column(db.String(100), nullable=False)
     description = db.Column(db.String(5000), nullable=False)
     pictures = db.relationship("Picture", secondary=product_picture, cascade="all,delete")
+    user_id = db.Column(db.Integer(), db.ForeignKey("user.id"))
 
     def __repr__(self):
         return f"<{self.id} {self.name}>"

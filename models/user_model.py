@@ -31,7 +31,9 @@ class User(db.Model, BaseModel):
     name = db.Column(db.String(60), nullable=False)
     password = db.Column(db.String(60), nullable=False)
     role_id = db.Column(db.Integer(), db.ForeignKey("user_role.id"))
-
+    dishes = db.relationship("DishRecipe", backref="user")
+    products = db.relationship("Product", backref="user")
+    
     @classmethod
     def find_by_username(cls, username):
         return cls.query.filter_by(username=username).first()
