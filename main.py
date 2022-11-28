@@ -11,7 +11,7 @@ from utils.logger import logger
 from flask_cors import CORS
 
 # routes
-from routes.product_route import product_routes
+# from routes.product_route import product_routes
 from routes.recipe_route import recipe_routes
 from routes.user_route import user_routes
 from routes.document_route import document_routes
@@ -40,10 +40,8 @@ app = create_app()
 #CORS setup
 CORS(app=app, resources={r'/*': {'origins': '*'}})
 
-logger.info("registered blueprints")
 # register blueprints
 app.register_blueprint(recipe_routes, url_prefix="/recipes/")
-app.register_blueprint(product_routes, url_prefix="/products/")
 app.register_blueprint(user_routes, url_prefix="/user/")
 app.register_blueprint(document_routes, url_prefix=Config.MEDIA_URL)
 

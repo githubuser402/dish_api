@@ -7,6 +7,7 @@ from utils.database import db
 from utils.decorators import token_required
 from werkzeug.utils import secure_filename
 import os
+from flask_cors import cross_origin
 
 from config.config import Config
 
@@ -17,6 +18,7 @@ recipe_routes = Blueprint("recipe_routes", __name__)
 
 
 @recipe_routes.route("/", methods=["GET"])
+@cross_origin()
 def get_all_recipes():
     recipe_schema = DishRecipeSchema(many=True)
     recipes = DishRecipe.query.all()
@@ -26,6 +28,7 @@ def get_all_recipes():
 
 
 @recipe_routes.route("/<recipe_id>/", methods=["GET"])
+@cross_origin()
 def get_recipe(recipe_id):
     recipe_schema = DishRecipeSchema()
     recipe = DishRecipe.query.filter_by(id=recipe_id).first()
@@ -39,6 +42,7 @@ def get_recipe(recipe_id):
 
 
 @recipe_routes.route("/", methods=["POST"])
+@cross_origin()
 def create_recipe():
     recipe_schema = DishRecipeSchema()
     data = request.get_json()
@@ -58,11 +62,13 @@ def create_recipe():
 
 
 @recipe_routes.route("/<recipe_id>/", methods=["PATCH"])
+@cross_origin()
 def patch_recipe(recipe_id):
     return response_with(resp.SUCCESS_200)
 
 
 @recipe_routes.route("/<recipe_id>/", methods=["DELETE"])
+@cross_origin()
 def delete_recipe(recipe_id):
     recipe = DishRecipe.query.filter_by(id=recipe_id).first()
 
@@ -73,6 +79,7 @@ def delete_recipe(recipe_id):
 
 
 @recipe_routes.route("/<recipe_id>/pictures/", methods=["GET"])
+@cross_origin()
 def get_recipe_pictures(recipe_id):
     picture_schema = PictureSchema(many=True)
 
@@ -89,6 +96,7 @@ def get_recipe_pictures(recipe_id):
 
 
 @recipe_routes.route("/<recipe_id>/pictures/", methods=["POST"])
+@cross_origin()
 def upload_recipe_picture(recipe_id):
     picture_schema = PictureSchema(many=True)
 
@@ -132,6 +140,7 @@ def upload_recipe_picture(recipe_id):
 
 
 @recipe_routes.route("/<product_id>/pictures/<picture_id>/", methods=["DELETE"])
+@cross_origin()
 def delete_recipe_picture(product_id, picture_id):
     picture = db.session.query(Picture).filter(Picture.id == picture_id).\
     join(Picture.dish).filter(DishRecipe.id == product_id).first()
