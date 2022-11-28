@@ -1,14 +1,15 @@
 from flask import Blueprint, request
+from flask_cors import cross_origin
 from utils.response import response_with
 import utils.response as resp
 from models.user_model import User, UserSchema
 from utils.token import Token
 
-
 user_routes = Blueprint("user_routes", __name__)
 
 
 @user_routes.route("/register/", methods=["POST"])
+@cross_origin()
 def register_user():
     data = request.get_json()
     user_schema = UserSchema()
@@ -34,6 +35,7 @@ def register_user():
 
 
 @user_routes.route("/login/", methods=["POST"])
+@cross_origin()
 def login_user():
     data = request.get_json()
     user_schema = UserSchema()
@@ -54,8 +56,3 @@ def login_user():
     token = Token.encode(id=user.id)
 
     return response_with(resp.SUCCESS_200, value={"token": token})
-
-
-# @user_routes.route("/<user_id>", methods=["GET"])
-# def get_user(user_id):
-#     return response_with(resp.SUCCESS_200)
