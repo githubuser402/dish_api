@@ -38,12 +38,20 @@ def create_app():
 app = create_app()
 
 #CORS setup
-CORS(app=app, resources={r'/*': {'origins': '*'}})
+CORS(app=app, resources={r'/*': {'origins': '*'}}, headers='Content-Type')
 
 # register blueprints
 app.register_blueprint(recipe_routes, url_prefix="/recipes/")
 app.register_blueprint(user_routes, url_prefix="/user/")
 app.register_blueprint(document_routes, url_prefix=Config.MEDIA_URL)
+
+@app.after_request
+def adding_cors_support(response):
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Headers'] = 'append,delete,entries,foreach,get,has,keys,set,values,Authorization,content-type,x-access-token'
+    response.headers['Access-Control-Allow-Methods'] = 'GET,PUT,POST,DELETE,OPTIONS'
+    return response
+
 
 if __name__ == "__main__":
     app.debug = True

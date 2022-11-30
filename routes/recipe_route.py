@@ -19,6 +19,7 @@ recipe_routes = Blueprint("recipe_routes", __name__)
 
 @recipe_routes.route("/", methods=["GET"])
 @cross_origin()
+# @token_required
 def get_all_recipes():
     recipe_schema = DishRecipeSchema(many=True)
     recipes = DishRecipe.query.all()
@@ -43,7 +44,8 @@ def get_recipe(recipe_id):
 
 @recipe_routes.route("/", methods=["POST"])
 @cross_origin()
-def create_recipe():
+@token_required
+def create_recipe(user):
     recipe_schema = DishRecipeSchema()
     data = request.get_json()
 
@@ -97,7 +99,8 @@ def get_recipe_pictures(recipe_id):
 
 @recipe_routes.route("/<recipe_id>/pictures/", methods=["POST"])
 @cross_origin()
-def upload_recipe_picture(recipe_id):
+@token_required
+def upload_recipe_picture(user, recipe_id):
     picture_schema = PictureSchema(many=True)
 
     try:
@@ -148,14 +151,18 @@ def delete_recipe_picture(product_id, picture_id):
     if not picture:
         return response_with(resp.SERVER_ERROR_404)
     
+    picture_path = picture.path
+    picture.delete()
+
+    logger.debug("picture record in db deleted")
+    
     try:
         
         logger.info(f"deleting picture: {picture}")
         
-        logger.debug(f"{Config.BASE_DIR + picture.path} exists: {bool(os.path.isfile(Config.BASE_DIR + picture.path))}")
+        logger.debug(f"{Config.BASE_DIR + picture_path} exists: {bool(os.path.isfile(Config.BASE_DIR + picture_path))}")
 
-        os.remove(Config.BASE_DIR + picture.path)
-        picture.delete()
+        os.remove(Config.BASE_DIR + picture_path)
 
         logger.info("picture deleted")
 

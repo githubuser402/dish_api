@@ -28,7 +28,7 @@ class User(db.Model, BaseModel):
     __tablename__ = "user"
 
     id = db.Column(db.Integer(), primary_key=True)
-    name = db.Column(db.String(60), nullable=False)
+    name = db.Column(db.String(60), nullable=False, unique=True)
     password = db.Column(db.String(60), nullable=False)
     role_id = db.Column(db.Integer(), db.ForeignKey("user_role.id"))
     dishes = db.relationship("DishRecipe", backref="user")

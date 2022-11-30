@@ -8,6 +8,11 @@ from utils.token import Token
 user_routes = Blueprint("user_routes", __name__)
 
 
+# @user_routes.route("/register/", methods=["OPTIONS"])
+# @cross_origin()
+# def register_option():
+#     return response_with(value={})    
+
 @user_routes.route("/register/", methods=["POST"])
 @cross_origin()
 def register_user():
@@ -56,3 +61,9 @@ def login_user():
     token = Token.encode(id=user.id)
 
     return response_with(resp.SUCCESS_200, value={"token": token})
+
+
+@user_routes.route("/valid/", methods=["POST"])
+@cross_origin
+def is_valid_user_token():
+    return response_with()
